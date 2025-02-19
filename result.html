@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Result Page</title>
+  </head>
+  <body style="background-color: hsla(346, 100%, 95%, 0.71); text-align: center;">
+    <h2>Result</h2>
+    <script>
+      function getQueryParam(param) {
+          let params = new URLSearchParams(window.location.search);
+          return params.get(param);
+      }
+
+      let name = getQueryParam("name");
+      let surname = getQueryParam("surname"); 
+
+      if (name && surname) {
+          alert("Name: " + name + "\nSurname: " + surname);
+      } else {
+          alert("Not Found");
+      }
+    </script>
+  </body>
+</html>
