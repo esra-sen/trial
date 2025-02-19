@@ -18,5 +18,15 @@
       <input type="reset"  style="color: rgba(122, 14, 58); background-color: hsl(346, 100%, 95%);">
       
     </form>
+    <script>
+      document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        let name = document.getElementById("name").value;
+        let surname = document.getElementById("surname").value;
+
+        window.location.href = "sonuc.html?name=" + encodeURIComponent(name) + "&surname=" + encodeURIComponent(surname);
+      });
+    </script>
   </body>
 </html>
